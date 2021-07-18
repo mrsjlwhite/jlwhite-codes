@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
+  isMorning: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.isMorning = this.checkTime();
+  }
+
+  checkTime(): boolean {
+    var today = new Date();
+    var time = today.getUTCHours();
+    return time >= 12 ? true : false;
   }
 
 }

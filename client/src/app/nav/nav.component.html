@@ -1,5 +1,4 @@
-<!--TODO: update to be conditional, depending on time-->
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar " [ngClass]="{'navbar-light bg-light': isMorning, 'navbar-dark bg-dark': !isMorning}">
     <div class="container-fluid">
         <!--TODO: update font-->
         <a class="navbar-brand" href="#">JLW</a>
@@ -10,11 +9,16 @@
     </div>
 </nav>
 <div class="collapse" id="collapsedContent">
-    <div class="bg-light p-4 text-end">
+    <div class="p-4 text-end" [ngClass]="{'bg-light': isMorning, 'bg-dark': !isMorning}">
         <!--TODO: update to fancy word spin/swaps-->
-        <a class="nav-link spin-me text-muted h5" href="#">about me</a>
-        <a class="nav-link spin-me text-muted h5" href="#">skillset</a>
-        <a class="nav-link spin-me text-muted h5" href="#">portfolio</a>
-        <a class="nav-link spin-me text-dark h5" href="#">contact me</a>
+        <a class="nav-link spin-me h5" [ngClass]="{'text-muted': isMorning, 'text-white': !isMorning}" href="#">about
+            me</a>
+        <a class="nav-link spin-me h5" [ngClass]="{'text-muted': isMorning, 'text-white': !isMorning}"
+            href="#">skillset</a>
+        <a class="nav-link spin-me h5" [ngClass]="{'text-muted': isMorning, 'text-white': !isMorning}"
+            href="#">portfolio</a>
+        <a class="nav-link spin-me h5" [ngClass]="{'text-dark': isMorning, 'text-secondary': !isMorning}"
+            href="#">contact
+            me</a>
     </div>
 </div>
