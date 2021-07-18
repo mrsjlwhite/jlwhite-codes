@@ -1,0 +1,7 @@
+.spin-me {
+    transition: 0.9s;
+}
+
+.spin-me:hover {
+    transform: rotateX(360deg);
+}
