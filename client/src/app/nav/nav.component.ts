@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BaseService } from '../base/base.service';
 
 @Component({
   selector: 'app-nav',
@@ -8,16 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class NavComponent implements OnInit {
   isMorning: boolean = false;
 
-  constructor() { }
+  constructor(private base: BaseService) { }
 
   ngOnInit(): void {
-    this.isMorning = this.checkTime();
-  }
-
-  checkTime(): boolean {
-    var today = new Date();
-    var time = today.getUTCHours();
-    return time >= 12 ? true : false;
+    this.isMorning = this.base.checkIfMorning();
   }
 
 }

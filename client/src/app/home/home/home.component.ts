@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BaseService } from 'src/app/base/base.service';
 
 @Component({
   selector: 'app-home',
@@ -8,17 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   isMorning: boolean = false;
 
-  constructor() { }
+  constructor(private base: BaseService) { }
 
   ngOnInit(): void {
-    this.isMorning = this.checkTime();
-  }
-
-  //TODO: move to service/directive
-  checkTime(): boolean {
-    var today = new Date();
-    var time = today.getUTCHours();
-    return time >= 12 ? true : false;
+    this.isMorning = this.base.checkIfMorning();
   }
 
 }
