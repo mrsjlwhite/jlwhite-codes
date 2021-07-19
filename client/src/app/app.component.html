@@ -1,4 +1,9 @@
 <app-nav></app-nav>
 
-<!--matches routes from 'app-routing'-->
-<router-outlet></router-outlet>
+<div class="h-100" [ngClass]="{'bg-day': isMorning, 'bg-night': !isMorning}">
+    <!--TODO: add loading comp-->
+    <div class="row">
+        <!--matches routes from 'app-routing'-->
+        <router-outlet></router-outlet>
+    </div>
+</div>

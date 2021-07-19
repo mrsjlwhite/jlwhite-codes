@@ -14,6 +14,10 @@ html, body {
     background-color: #424083;
 }
 
+.center-width {
+    width: 800px;
+}
+
 .theme-font {
     margin-top: 30%;
     font-family: 'Crimson Text', serif;
