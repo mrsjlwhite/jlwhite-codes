@@ -23,6 +23,14 @@ html, body {
     font-family: 'Crimson Text', serif;
 }
 
+.linkedin-c {
+    color: #0A66C2;
+}
+
+.github-c {
+    color: #181717;
+}
+
 .fade-in {
     animation: fadeIn 5s;
     -webkit-animation: fadeIn 5s;

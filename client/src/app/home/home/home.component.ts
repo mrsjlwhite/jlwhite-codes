@@ -15,4 +15,15 @@ export class HomeComponent implements OnInit {
     this.isMorning = this.base.checkIfMorning();
   }
 
+  goToLinkedIn() {
+    this.base.goToLinkedIn();
+  }
+
+  goToResume() {
+    this.base.goToResume();
+  }
+
+  goToGitHub() {
+    this.base.goToGitHub();
+  }
 }
