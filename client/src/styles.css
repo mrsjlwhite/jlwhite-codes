@@ -6,6 +6,12 @@ html, body {
     overflow-x: hidden;
 }
 
+/*bye bye scrollbar*/
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 .bg-day {
     background-color: #F2D9CA;
 }

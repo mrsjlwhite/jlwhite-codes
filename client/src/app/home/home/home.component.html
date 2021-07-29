@@ -1,20 +1,32 @@
-<div class="mx-auto center-width">
-    <div class="fade-in theme-font" [ngClass]="{'text-dark': isMorning, 'text-light': !isMorning}">
-        <h1>
-            Hi! My name is Jeslyn.
-        </h1>
-        <h2>
-            I'm a software engineer with a passion for building beautiful user-friendly applications.
-        </h2>
-    </div>
+<div class="container h-100">
     <div class="row">
-        <div class="button-group">
-            <button type="button" class="btn btn-outline-info linkedin-c" (click)="this.goToLinkedIn()">
-                <img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/linkedin.svg" />
-                <img height="32" width="32" src="https://unpkg.com/simple-icons@v5/icons/linkedin.svg" />
-            </button>
-            <button type="button" class="btn btn-outline-light" (click)="this.goToResume()">Resume</button>
-            <button type="button" class="btn btn-outline-light github-c" (click)="this.goToGitHub()">GitHub</button>
+        <div class="position-relative">
+            <div class="position-absolute top-50 start-50 translate-middle">
+                <div id="homeBlurb" class="fade-in theme-font"
+                    [ngClass]="{'text-secondary': isMorning, 'text-light': !isMorning}">
+                    <h1 class="text-start">
+                        Hi! My name is Jeslyn.
+                    </h1>
+                    <h2 class="text-center">
+                        I'm a software engineer with a passion for building beautiful user-friendly
+                        applications.
+                    </h2>
+                </div>
+                <div class="row">
+                    <div class="button-group text-end" id="homeBtns">
+                        <button type="button" class="btn btn-outline-info linkedin-c" (click)="this.goToLinkedIn()">
+                            <img height="32" width="32"
+                                src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/linkedin.svg" />
+                        </button>
+                        <button type="button" class="btn btn-outline-light" (click)="this.goToResume()">Resume</button>
+                        <button type="button" class="btn btn-outline-light github-c"
+                            (click)="this.goToGitHub()">GitHub</button>
+                    </div>
+                </div>
+            </div>
+            <div class="position-absolute top-50 start-0 translate-middle" id="homeImgContainer">
+                <img src="../../../assets/images/lightbulb.png" width="400" height="600" class="img-fluid">
+            </div>
         </div>
     </div>
 </div>

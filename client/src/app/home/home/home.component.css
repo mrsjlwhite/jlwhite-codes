@@ -1,4 +1,27 @@
-button {
-    margin: 1%;
+.container {
+    height: 100%;
+    margin-top: 5%;
+}
+
+#homeBlurb {
+    margin-top: 100%;
+}
+
+#homeImgContainer {
+    z-index: 0;
     margin-top: 25%;
+}
+
+#homeImgContainer img {
+    margin-left: 45%;
+    opacity: 0.5;
+    transform: rotate(0.90turn);
+}
+
+#homeBtns {
+    margin-top: 15%;
+}
+
+#homeBtns button {
+    margin: 1%;
 }
