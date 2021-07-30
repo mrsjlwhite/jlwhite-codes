@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { UiSwitchModule } from 'ngx-ui-switch';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,7 +24,16 @@ import { ContactMeComponent } from './components/contact-me/contact-me.component
   imports: [ // packages
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    UiSwitchModule.forRoot({
+      size: 'medium',
+      color: '757474',
+      switchColor: '#FDFDFD',
+      defaultBgColor: '#B7B6B6',
+      defaultBoColor: '#757474',
+      checkedLabel: '🌞',
+      uncheckedLabel: '🌜'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,9 +4,11 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class BaseService {
-  resumeUrl: "https://gitconnected.com/mrsjlwhite/resume" = "https://gitconnected.com/mrsjlwhite/resume";
-  githubUrl: "https://github.com/mrsjlwhite" = "https://github.com/mrsjlwhite";
-  linkedinUrl: "https://www.linkedin.com/in/jeslyn-white/" = "https://www.linkedin.com/in/jeslyn-white/";
+  resumeUrl: string = "https://gitconnected.com/mrsjlwhite/resume";
+  githubUrl: string = "https://github.com/mrsjlwhite";
+  linkedinUrl: string = "https://www.linkedin.com/in/jeslyn-white/";
+
+  isMorning: boolean = false;
 
   constructor() { }
 

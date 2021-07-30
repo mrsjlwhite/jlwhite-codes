@@ -1,7 +1,13 @@
 <nav class="navbar shadow" [ngClass]="{'navbar-light bg-light': isMorning, 'navbar-dark bg-dark': !isMorning}">
     <div class="container-fluid">
-        <!--TODO: update font-->
         <a class="navbar-brand" href="#">JLW</a>
+
+        <!--Toggle-->
+        <ui-switch style="z-index: 1000;" [checked]="isSwitchedOn" [(ngModel)]="isSwitchedOn"
+            (change)="onChange($event)">
+        </ui-switch>
+
+        <!--Hamburger-->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsedContent"
             aria-controls="collapsedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

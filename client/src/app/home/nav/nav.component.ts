@@ -8,11 +8,17 @@ import { BaseService } from '../../base/base.service';
 })
 export class NavComponent implements OnInit {
   isMorning: boolean = false;
+  isSwitchedOn: boolean = false;
 
   constructor(private base: BaseService) { }
 
   ngOnInit(): void {
-    this.isMorning = this.base.checkIfMorning();
+    this.isMorning = true; //this.base.checkIfMorning();
+  }
+
+  onChange($event: any) {
+    console.log('onChange', $event);
+    this.isMorning = $event;
   }
 
 }

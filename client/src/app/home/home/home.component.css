@@ -15,11 +15,12 @@
 #homeImgContainer img {
     margin-left: 45%;
     opacity: 0.5;
+    /*TODO: move to be conditional for dark/light feature*/
     transform: rotate(0.90turn);
 }
 
 #homeBtns {
-    margin-top: 15%;
+    margin-top: 10%;
 }
 
 #homeBtns button {

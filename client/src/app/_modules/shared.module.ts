@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
+import { UiSwitchModule } from 'ngx-ui-switch';
 // import { ToastrModule } from 'ngx-toastr';
 
 
@@ -13,14 +14,16 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
     CommonModule,
     BrowserAnimationsModule,
     BsDropdownModule.forRoot(),
-    TabsModule.forRoot()
+    TabsModule.forRoot(),
+    UiSwitchModule
     // ToastrModule.forRoot({
     //   positionClass: 'toast-bottom-right'
     // }),
   ],
   exports: [
     BsDropdownModule,
-    TabsModule
+    TabsModule,
+    UiSwitchModule
     // ToastrModule,
   ]
 })
