@@ -13,6 +13,7 @@ export class NavComponent implements OnInit {
 
   ngOnInit(): void {
     this.base.checkIfMorning();
+    this.isSwitchedOn = this.base.isMorning;
   }
 
   onChange($event: any) {

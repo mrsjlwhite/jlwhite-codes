@@ -29,12 +29,8 @@ html, body {
     font-family: 'Crimson Text', serif;
 }
 
-.linkedin-c {
-    color: #0A66C2;
-}
-
-.github-c {
-    color: #181717;
+.text-rose {
+    color: rosybrown;
 }
 
 .fade-in {
