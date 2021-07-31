@@ -15,9 +15,9 @@ export class BaseService {
   checkIfMorning() {
     var today = new Date();
     var time = today.getHours();
-    // var sunset = 20; // 8pm
-    var sunset = 21; // 9pm
-    return time < sunset ? true : false;
+    var sunrise = 6; // 6am
+    var sunset = 20; // 8pm
+    this.isMorning = time < sunset && time > sunrise ? true : false;
   }
 
   goToResume() {

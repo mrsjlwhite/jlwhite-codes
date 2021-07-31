@@ -7,12 +7,11 @@ import { BaseService } from 'src/app/base/base.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  isMorning: boolean = false;
 
-  constructor(private base: BaseService) { }
+  constructor(public base: BaseService) { }
 
   ngOnInit(): void {
-    this.isMorning = this.base.checkIfMorning();
+    this.base.checkIfMorning();
   }
 
   goToLinkedIn() {

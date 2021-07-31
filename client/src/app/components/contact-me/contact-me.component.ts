@@ -7,11 +7,10 @@ import { BaseService } from 'src/app/base/base.service';
   styleUrls: ['./contact-me.component.css']
 })
 export class ContactMeComponent implements OnInit {
-  isMorning: boolean = false;
 
   constructor(public base: BaseService) { }
 
   ngOnInit(): void {
-    this.isMorning = this.base.checkIfMorning();
+    this.base.checkIfMorning();
   }
 }

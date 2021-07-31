@@ -7,18 +7,16 @@ import { BaseService } from '../../base/base.service';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-  isMorning: boolean = false;
   isSwitchedOn: boolean = false;
 
-  constructor(private base: BaseService) { }
+  constructor(public base: BaseService) { }
 
   ngOnInit(): void {
-    this.isMorning = true; //this.base.checkIfMorning();
+    this.base.checkIfMorning();
   }
 
   onChange($event: any) {
-    console.log('onChange', $event);
-    this.isMorning = $event;
+    this.base.isMorning = $event;
   }
 
 }

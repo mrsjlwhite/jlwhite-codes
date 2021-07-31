@@ -1,4 +1,5 @@
-<nav class="navbar shadow" [ngClass]="{'navbar-light bg-light': isMorning, 'navbar-dark bg-dark': !isMorning}">
+<nav class="navbar shadow"
+    [ngClass]="{'navbar-light bg-light': this.base.isMorning, 'navbar-dark bg-dark': !this.base.isMorning}">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">JLW</a>
 
@@ -15,23 +16,27 @@
     </div>
 </nav>
 <div class="collapse" id="collapsedContent">
-    <div class="p-4 text-end" [ngClass]="{'bg-light': isMorning, 'bg-dark': !isMorning}">
+    <div class="p-4 text-end" [ngClass]="{'bg-light': this.base.isMorning, 'bg-dark': !this.base.isMorning}">
         <!--TODO: update to fancy word spin/swaps-->
-        <a class="nav-link spin-me h5" [ngClass]="{'text-muted': isMorning, 'text-white': !isMorning}" routerLink="/"
+        <a class="nav-link spin-me h5"
+            [ngClass]="{'text-muted': this.base.isMorning, 'text-white': !this.base.isMorning}" routerLink="/"
             routerLinkActive='active'>
             home
         </a>
-        <a class="nav-link spin-me h5" [ngClass]="{'text-muted': isMorning, 'text-white': !isMorning}"
-            routerLink="/about-me" href="/about-me" routerLinkActive='active'>
+        <a class="nav-link spin-me h5"
+            [ngClass]="{'text-muted': this.base.isMorning, 'text-white': !this.base.isMorning}" routerLink="/about-me"
+            href="/about-me" routerLinkActive='active'>
             about me
         </a>
-        <a class="nav-link spin-me h5" [ngClass]="{'text-muted': isMorning, 'text-white': !isMorning}"
-            routerLink="/skillset" routerLinkActive='active'>
+        <a class="nav-link spin-me h5"
+            [ngClass]="{'text-muted': this.base.isMorning, 'text-white': !this.base.isMorning}" routerLink="/skillset"
+            routerLinkActive='active'>
             skillset
         </a>
-        <!-- <a class="nav-link spin-me h5" [ngClass]="{'text-muted': isMorning, 'text-white': !isMorning}"
+        <!-- <a class="nav-link spin-me h5" [ngClass]="{'text-muted': this.base.isMorning, 'text-white': !this.base.isMorning}"
             routerLink="/portfolio" routerLinkActive='active'>portfolio</a> -->
-        <a class="nav-link spin-me h5" [ngClass]="{'text-dark': isMorning, 'text-secondary': !isMorning}"
+        <a class="nav-link spin-me h5"
+            [ngClass]="{'text-dark': this.base.isMorning, 'text-secondary': !this.base.isMorning}"
             routerLink="/contact-me" routerLinkActive='active'>
             contact me
         </a>

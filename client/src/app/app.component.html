@@ -1,6 +1,6 @@
 <app-nav></app-nav>
 
-<div class="h-100" [ngClass]="{'bg-day': isMorning, 'bg-night': !isMorning}">
+<div class="h-100" [ngClass]="{'bg-day': this.base.isMorning, 'bg-night': !this.base.isMorning}">
     <!--TODO: add loading comp-->
     <div class="row">
         <!--matches routes from 'app-routing'-->
