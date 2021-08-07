@@ -1,9 +1,38 @@
-<div class="container h-100">
+<div class="container">
+    <div class="row align-items-center">
+        <div class="col">
+            <div id="homeImgContainer">
+                <img src="../../../assets/images/lightbulb.png" width="400" height="600" class="img-fluid">
+            </div>
+            <div id="homeBlurb" class="fade-in theme-font auto-margin"
+                [ngClass]="{'text-secondary': this.base.isMorning, 'text-rose': !this.base.isMorning}">
+                <h1 class="text-start">
+                    Hi! My name is Jeslyn.
+                </h1>
+                <h2 class="text-center">
+                    I'm a software developer with a passion for building beautiful user-friendly
+                    applications.
+                </h2>
+            </div>
+        </div>
+    </div>
+    <div class="row align-items-center auto-margin">
+        <div class="col">
+            <div class="button-group text-end" id="homeBtns">
+                <button type="button" class="btn btn-outline-light" (click)="this.goToLinkedIn()">LinkedIn</button>
+                <button type="button" class="btn btn-outline-light" (click)="this.goToResume()">Resume</button>
+                <button type="button" class="btn btn-outline-light" (click)="this.goToGitHub()">GitHub</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="container h-100">
     <div class="row">
         <div class="position-relative">
             <div class="position-absolute top-50 start-50 translate-middle">
                 <div id="homeBlurb" class="fade-in theme-font"
-                    [ngClass]="{'text-secondary': this.base.isMorning, 'text-light': !this.base.isMorning}">
+                    [ngClass]="{'text-secondary': this.base.isMorning, 'text-rose': !this.base.isMorning}">
                     <h1 class="text-start">
                         Hi! My name is Jeslyn.
                     </h1>
@@ -26,4 +55,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->

@@ -1,11 +1,22 @@
-<div class="mx-auto center-width">
-    <p class="fade-in theme-font" [ngClass]="{'text-muted': this.base.isMorning, 'text-rose': !this.base.isMorning}">
-        I’m a self-taught software engineer with a passion for developing user-friendly web applications. Since
-        beginning my
-        career in 2017, my interest and admiration for programming has only grown. During this time, I’ve
-        developed an
-        ethic
-        of building clean, scalable, and well-organized code. I am interested in solo work and collaborative
-        projects.
-    </p>
+<div class="container">
+    <div class="row align-items-center">
+        <div class="col">
+            <p class="fade-in theme-font"
+                [ngClass]="{'text-muted': this.base.isMorning, 'text-rose': !this.base.isMorning}">
+                I’m a self-taught software engineer with a passion for developing user-friendly web applications. Since
+                beginning my
+                career in 2017, my interest and admiration for programming has only grown. During this time, I’ve
+                developed an
+                ethic
+                of building clean, scalable, and well-organized code. I am interested in solo work and collaborative
+                projects.
+            </p>
+            <italic class="fade-in theme-font"
+                [ngClass]="{'text-muted': this.base.isMorning, 'text-rose': !this.base.isMorning}">
+                This website checks what time it is, and sets it to Day (🌞) or Night (🌜) mode. But feel free to switch
+                the
+                toggle to your favorite. 😊
+            </italic>
+        </div>
+    </div>
 </div>
